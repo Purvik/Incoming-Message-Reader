@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/receiverToggle"
+        android:layout_alignStart="@+id/receiverToggle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:onClick="mannualClick"
+        android:text="Call" />
+
+    <ToggleButton
+        android:id="@+id/receiverToggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textOff="@string/receiverDisable"
+        android:textOn="@string/receiverEnabled" />
+
+    <Button
+        android:id="@+id/btnToggleDetails"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/receiverToggle"
+        android:layout_marginBottom="15dp"
+        android:layout_toEndOf="@+id/receiverToggle"
+        android:layout_toRightOf="@+id/receiverToggle"
+        android:onClick="showDetails"
+        android:text="@string/queryDetails" />
+
+    <TextView
+        android:id="@+id/tv_receiverDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/receiverToggle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/appDetails"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="gone" />
+
+</RelativeLayout>
